@@ -26,9 +26,14 @@ public class OptionsMenu : MonoBehaviour
     [SerializeField]
     private float _distanceToCloseMenu;
 
+    [SerializeField]
+    private Slider _volumeSlider;
+
     private void Awake()
     {
         _openOptionsMenuButton.action.performed += x => ToggleOptionsMenu();
+        _volumeSlider.onValueChanged.AddListener(x => AudioListener.volume = x);
+        AudioListener.volume = _volumeSlider.value;
         _snapTurnToggle.onValueChanged.AddListener(SnapTurn);
         SnapTurn(_snapTurnToggle.isOn);
 
