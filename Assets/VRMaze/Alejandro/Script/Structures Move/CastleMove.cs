@@ -8,6 +8,8 @@ public class CastleMove : MonoBehaviour
     [SerializeField]
     private AudioSource instructions;
     [SerializeField]
+    private bool playMusic = true;
+    [SerializeField]
     GameObject moveCastle;
     private bool castleUp = false;
     [SerializeField]
@@ -45,8 +47,11 @@ public class CastleMove : MonoBehaviour
 
        // Debug.Log("open");
         castleUp = true;
-        instructions.Play();
-
+        if (playMusic == true)
+        {
+            instructions.Play();
+            playMusic = false;
+        }
 
     }
 
