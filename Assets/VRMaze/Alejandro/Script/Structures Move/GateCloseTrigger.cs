@@ -7,6 +7,8 @@ public class GateCloseTrigger : MonoBehaviour
 {
     [SerializeField]
     GameObject moveGate;
+    [SerializeField]
+    private AudioSource source;
     private bool gateClosed = false;
     [SerializeField]
     private float speed = 2.0f;
@@ -14,7 +16,7 @@ public class GateCloseTrigger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -43,6 +45,7 @@ public class GateCloseTrigger : MonoBehaviour
 
 //        Debug.Log("open");
         gateClosed = true;
+        source.Play();
 
         
 

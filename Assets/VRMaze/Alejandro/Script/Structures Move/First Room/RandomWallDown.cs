@@ -10,6 +10,8 @@ public class RandomWallDown : MonoBehaviour
     [SerializeField]
     private GameObject pointLight;
     [SerializeField]
+    public bool playInstCrys = false;
+    [SerializeField]
     public int randomDoorPicker = 0;
     [SerializeField]
     public float speedWallDown = 2.0f;
@@ -27,6 +29,7 @@ public class RandomWallDown : MonoBehaviour
     {
         if (randomDoorPicker > 0)
         {
+            playInstCrys = true;
             Destroy(gameObject);
             lightOne.lightOn = true;
             gemsCollected.gemsCollected += 1;
@@ -47,7 +50,7 @@ public class RandomWallDown : MonoBehaviour
             return;
 
         randomDoorPicker = Random.Range(1, 4);
-       // Debug.Log(randomDoorPicker + "door number");
+        // Debug.Log(randomDoorPicker + "door number");
 
 
     }

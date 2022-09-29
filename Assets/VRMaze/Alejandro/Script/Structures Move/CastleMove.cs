@@ -6,6 +6,8 @@ using Unity.XR.CoreUtils;
 public class CastleMove : MonoBehaviour
 {
     [SerializeField]
+    private AudioSource instructions;
+    [SerializeField]
     GameObject moveCastle;
     private bool castleUp = false;
     [SerializeField]
@@ -14,7 +16,7 @@ public class CastleMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        instructions = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -43,7 +45,7 @@ public class CastleMove : MonoBehaviour
 
        // Debug.Log("open");
         castleUp = true;
-
+        instructions.Play();
 
 
     }

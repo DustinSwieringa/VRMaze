@@ -6,10 +6,13 @@ public class ElevatorControl : MonoBehaviour
 {
     LiftMovement liftMovement;
     [SerializeField]
+    private AudioSource byeMsg;
+    [SerializeField]
     private GameObject lift;
     // Start is called before the first frame update
     void Awake()
     {
+        byeMsg.GetComponent<AudioSource>();
         liftMovement = lift.GetComponent<LiftMovement>();
     }
 
@@ -20,6 +23,7 @@ public class ElevatorControl : MonoBehaviour
          //   Debug.Log("touchdown");
             Destroy(collision.gameObject);
             liftMovement.elevatorMove = true;
+            byeMsg.Play();
         }
         
     }
