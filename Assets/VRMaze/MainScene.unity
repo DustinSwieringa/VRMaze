@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414726, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6311,10 +6311,6 @@ PrefabInstance:
     - target: {fileID: 4976018262040531530, guid: 64598814f7e645a4e8ecc61f4b8a59a6, type: 3}
       propertyPath: m_Name
       value: BushraMaze
-      objectReference: {fileID: 0}
-    - target: {fileID: 4976018262040531530, guid: 64598814f7e645a4e8ecc61f4b8a59a6, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64598814f7e645a4e8ecc61f4b8a59a6, type: 3}
