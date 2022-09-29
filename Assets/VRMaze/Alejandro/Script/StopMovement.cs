@@ -7,13 +7,18 @@ public class StopMovement : MonoBehaviour
 {
     Test onStartMove;
     [SerializeField]
+    private AudioSource source;
+    [SerializeField]
     GameObject moveInteractable;
     [SerializeField]
     private GameObject player;
+    [SerializeField]
+    private int music = 0;
 
     void Awake()
     {
         onStartMove = moveInteractable.GetComponent<Test>();
+        source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -30,6 +35,11 @@ public class StopMovement : MonoBehaviour
 
        // Debug.Log("oof");
         onStartMove.walkingStart = true;
+        if (music == 0)
+        {
+            source.Play();
+            music += 1;
+        }
 
     }
 }
